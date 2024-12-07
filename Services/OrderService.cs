@@ -48,7 +48,7 @@ namespace dotnet_service.Services
         {
             orderData.Id = Guid.NewGuid(); // Generate a unique ID for the new order
             orderData.PlacedAt = DateTime.UtcNow;
-            orderData.UpdatedAt = DateTime.UtcNow;
+            // orderData.UpdatedAt = DateTime.UtcNow;
             await _appDbContext.Orders.AddAsync(orderData);
             var result = await _appDbContext.SaveChangesAsync();
             return orderData;
